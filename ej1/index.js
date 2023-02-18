@@ -1,5 +1,5 @@
 //Hacer node.\index.js para funcionar
-
+for(let i = 0; i<10; i++){
 fetch('https://official-joke-api.appspot.com/random_joke')
   .then(response => response.json())
   .then(data => {
@@ -8,10 +8,11 @@ fetch('https://official-joke-api.appspot.com/random_joke')
       console.log(data.setup);
       console.log(data.punchline);
       const parte1 =`<li>${data.setup}</li>`;
-      const parte2 =`<li>${data.punchline}</li>`;
-
+      const parte2 =`<li>${data.punchline}</li><br>`;
+      
       document.querySelector('ul').insertAdjacentHTML('beforeend',parte1);
       document.querySelector('ul').insertAdjacentHTML('beforeend',parte2);
+      
     } else {
       console.log(data.joke);
     }
@@ -19,3 +20,4 @@ fetch('https://official-joke-api.appspot.com/random_joke')
   .catch(error => {
     console.error(error);
   });
+}
