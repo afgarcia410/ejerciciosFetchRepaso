@@ -1,5 +1,5 @@
-const usuario = document.getElementById('user');
-const contraseña = document.getElementById('password');
+const usuario = document.getElementById('usuario');
+const contraseña = document.getElementById('contraseña');
 
 async function login(url, data) {
     const response = await fetch(url, {
