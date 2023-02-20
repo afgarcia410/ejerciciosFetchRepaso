@@ -1,4 +1,16 @@
 //Hacer node.\index.js para funcionar
+
+async function login(url, data) {
+  const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+  });
+  return response.json();
+}
+
 for(let i = 0; i<10; i++){
 fetch('https://official-joke-api.appspot.com/random_joke')
   .then(response => response.json())
