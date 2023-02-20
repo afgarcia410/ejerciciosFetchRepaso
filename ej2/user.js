@@ -1,6 +1,6 @@
+let boton = document.getElementById("btn");
 const usuario = document.getElementById('usuario');
 const contraseña = document.getElementById('contraseña');
-const button = document.getElementById('btn');
 
 async function login(url, data) {
     const response = await fetch(url, {
@@ -14,7 +14,7 @@ async function login(url, data) {
   }
 
 async function init() {
-    await login('http://localhost:3000/login', {
+    await login('http://localhost:3010/login', {
         user: usuario.value,
         password: contraseña.value,
     }).then(res => {
@@ -27,3 +27,8 @@ async function init() {
         console.log(error);
     });
 }
+boton.addEventListener('click', () =>{
+    init();
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('error').style.display = 'none';
+})

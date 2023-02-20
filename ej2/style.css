@@ -1,0 +1,18 @@
+body{
+    background-color: red;
+}
+.login{
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.error{
+    display: none;
+    margin: 0 auto;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
