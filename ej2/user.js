@@ -1,5 +1,6 @@
 const usuario = document.getElementById('usuario');
 const contraseña = document.getElementById('contraseña');
+const button = document.getElementById('btn');
 
 async function login(url, data) {
     const response = await fetch(url, {
@@ -13,7 +14,7 @@ async function login(url, data) {
   }
 
 async function init() {
-    await login('http://localhost:3010/login', {
+    await login('http://localhost:3000/login', {
         user: usuario.value,
         password: contraseña.value,
     }).then(res => {
